@@ -18,15 +18,15 @@
 
 <body>
     <header class="hy__header">
-        <div class="wideContainer">
+        <div class="container">
             <nav class="hy__navbar">
                 <div class="hy__navbar__logo">
                     <a href="#">Hypnosis <span>TM</span></a>
                 </div>
                 <ul class="hy__navbar__menu">
                     <li class="hy__navbar__menu__link"><a href="#">Home</a></li>
-                    <li class="hy__navbar__menu__link"><a href="#">World</a></li>
-                    <li class="hy__navbar__menu__link"><a href="#">Politics</a></li>
+                    <li class="hy__navbar__menu__link hy__navbar__menu__link--through"><a href="#">World</a></li>
+                    <li class="hy__navbar__menu__link hy__navbar__menu__link--through"><a href="#">Politics</a></li>
                     <li class="hy__navbar__menu__link"><a href="#">Tech</a></li>
                     <li class="hy__navbar__menu__link"><a href="#">Sports</a></li>
                     <li class="hy__navbar__menu__link"><a href="#">Culture</a></li>
@@ -39,30 +39,136 @@
     </header>
 
     <main>
-        <section class="hy__section__title">
-            <div class="container">
-                <h1 class="hy__title">Stand up for Somalia</h1>
+        <section class="hy__title">
+            <div class="hy__title__heading container">
+                <h1>Stand up for Somalia</h1>
             </div>
         </section>
 
         <section class="hy__author">
             <div class="container">
-                <div class="hy__author__about">
-                    <div class="hy__author__info">
-                        <img src="img/christine.png" alt="">
+                <div class="hy__author__wrapper">
+                    <div class="hy__author__about">
+                        <img class="hy__author__image" src="img/christine.png" alt="">
+                        <div class="hy__author__info">
+                            <p class="hy__author__info__name">Christine Kolesnikov</p>
+                            <p class="hy__author__info__title">Hypnosis - Senior Editor</p>
+                        </div>
                     </div>
                     <div class="hy__author__social">
-                        <div class="hy__author__social__buttons">
-                            <button>slika/ Share</button>
-                            <button>slika/ Tweet</button>
-                            <button>slika/ Share</button>
-                            <button>slika/ Copy</button>
-                        </div>
+                        <button class="hy__author__social__button"><i class="fa-brands fa-facebook"></i>
+                            Share</button>
+                        <button class="hy__author__social__button"><i class="fa-brands fa-twitter"></i>
+                            Tweet</button>
+                        <button class="hy__author__social__button"><i class="fa-brands fa-linkedin"></i>
+                            Share</button>
+                        <button class="hy__author__social__button"><i class="fa-thin fa-link"></i> Copy</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="hy__subscribe container">
+            <h3 class="hy__subscribe__heading">Subscribe to our newsletter</h3>
+            <h5 class="hy__subscribe__subheading">Be the first to know about the biggest stories as they break</h5>
+            <div class="hy__subscribe__input">
+                <input type="email" placeholder="Email address" />
+                <button class="hy__subscribe__button">Subscribe</button>
+            </div>
+            <p class="hy__subscribe__term">By clicking Subscribe, you indicate that you agree to Hypnosis Terms and
+                Conditions and Data Use
+                Privacy Policy</p>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="hy_footer">
+                <ul class="hy__footer__column">
+                    <h3 class="hy__footer__column__title">World</h3>
+                    <li class="hy__footer__column__item">Africa</li>
+                    <li class="hy__footer__column__item">Americas</li>
+                    <li class="hy__footer__column__item">Asia</li>
+                    <li class="hy__footer__column__item">Australia</li>
+                    <li class="hy__footer__column__item">China</li>
+                    <li class="hy__footer__column__item">Europe</li>
+                    <li class="hy__footer__column__item">India</li>
+                    <li class="hy__footer__column__item">Middle East</li>
+                </ul>
+                <ul class="hy__footer__column">
+                    <h3 class="hy__footer__column__title">Politics</h3>
+                    <li class="hy__footer__column__item">Ukraine</li>
+                    <li class="hy__footer__column__item">Europe</li>
+                    <li class="hy__footer__column__item">Facts First</li>
+                    <li class="hy__footer__column__item">2022 Midterms</li>
+                </ul>
+                <ul class="hy__footer__column">
+                    <h3 class="hy__footer__column__title">Markets</h3>
+                    <li class="hy__footer__column__item">Tech</li>
+                    <li class="hy__footer__column__item">Media</li>
+                    <li class="hy__footer__column__item">Success</li>
+                    <li class="hy__footer__column__item">Perspectives</li>
+                    <li class="hy__footer__column__item">Videos</li>
+                </ul>
+                <ul class="hy__footer__column">
+                    <h3 class="hy__footer__column__title">Tech</h3>
+                    <li class="hy__footer__column__item">Innovate</li>
+                    <li class="hy__footer__column__item">Gadget</li>
+                    <li class="hy__footer__column__item">Foreseeable</li>
+                    <li class="hy__footer__column__item">Future</li>
+                    <li class="hy__footer__column__item">Ahead</li>
+                    <li class="hy__footer__column__item">Upstarts</li>
+                    <li class="hy__footer__column__item">Work</li>
+                    <li class="hy__footer__column__item">Transformed</li>
+                    <li class="hy__footer__column__item">Innovative</li>
+                    <li class="hy__footer__column__item">Cities</li>
+                </ul>
+                <ul class="hy__footer__column">
+                    <h3 class="hy__footer__column__title">Sports</h3>
+                    <li class="hy__footer__column__item">Football</li>
+                    <li class="hy__footer__column__item">Tennis</li>
+                    <li class="hy__footer__column__item">Golf</li>
+                    <li class="hy__footer__column__item">Olympics</li>
+                    <li class="hy__footer__column__item">US Sports</li>
+                    <li class="hy__footer__column__item">Climbing</li>
+                    <li class="hy__footer__column__item">Motorsport</li>
+                    <li class="hy__footer__column__item">Esports</li>
+                </ul>
+                <ul class="hy__footer__column">
+                    <h3 class="hy__footer__column__title">Culture</h3>
+                    <li class="hy__footer__column__item">Arts</li>
+                    <li class="hy__footer__column__item">Design</li>
+                    <li class="hy__footer__column__item">Fashion</li>
+                    <li class="hy__footer__column__item">Architecture</li>
+                    <li class="hy__footer__column__item">Luxury</li>
+                    <li class="hy__footer__column__item">Beauty</li>
+                    <li class="hy__footer__column__item">Video</li>
+                </ul>
+            </div>
+            <div class="hy__footer__bottom">
+                <div class="hy__footer__bottom__left">
+                    <h4>Hypnosis <span>TM</span></h4>
+                    <p>© 2022 Hypnosis Corporation Inc. All rights reserved.</p>
+                </div>
+                <div class="hy__footer__bottom__right">
+                    <div class="hy__footer__bottom__icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <ul class="hy__footer__bottom__menu">
+                        <li class="hy__footer__bottom__link">Terms & Conditions</li>
+                        <li class="hy__footer__bottom__link">Cookies</li>
+                        <li class="hy__footer__bottom__link">Ads</li>
+                        <li class="hy__footer__bottom__link">About us</li>
+                        <li class="hy__footer__bottom__link">Join our team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
