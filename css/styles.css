@@ -56,10 +56,6 @@ ul {
   font-size: 24px;
   font-weight: 700;
 }
-.hy__navbar__logo span {
-  font-size: 7px;
-  font-weight: 600;
-}
 
 .hy__navbar__menu {
   display: flex;
