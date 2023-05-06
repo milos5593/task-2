@@ -51,9 +51,12 @@ p {
 }
 
 .container {
-    // max-width: 428px;
     width: 100%;
     margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-xl) {
+        max-width: 1280px;
+    }
 }
 
 // Full-width divider
@@ -98,52 +101,96 @@ p {
 }
 
 .hy__navbar__search {
-    // max-width: 260px;
+    order: 1;
 
     i {
         height: 20px;
     }
+
+    @media screen and (min-width: $breakpoint-md) {
+        order: 3;
+        max-width: 160px;
+
+        i {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+        max-width: 260px;
+    }
 }
 
-// .hy__navbar__logo {
+.hy__navbar__logo {
+    order: 2;
 
-// }
+    @media screen and (min-width: $breakpoint-md) {
+        order: 1;
+    }
+}
 
 .hy__navbar__logo__link {
     font-weight: 700;
     font-size: 22px;
     line-height: 24px;
+
+    @media screen and (min-width: $breakpoint-xl) {
+        font-size: 24px;
+    }
 }
 
 .hy__navbar__menu {
+    order: 3;
 
     i {
         height: 20px;
     }
 
-    // display: flex;
-    // margin: 0;
-    // gap: 60px;
+    @media screen and (min-width: $breakpoint-md) {
+        order: 2;
+        display: flex;
+        margin: 0;
+        gap: 20px;
+
+        i {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+        gap: 60px;
+    }
 }
 
-// .hy__navbar__menu__link {
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 19px;
+.hy__navbar__menu__link {
+    display: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
 
-//     &.hy__navbar__menu__link--through {
-//         text-decoration: line-through;
-//     }
-// }
+    &.hy__navbar__menu__link--through {
+        text-decoration: line-through;
+    }
 
-// .hy__navbar__search__input {
-//     font-size: 14px;
-//     border: 1px solid $hy-gray-search;
-//     border-radius: 20px;
-//     width: 100%;
-//     padding: 12px 8px 12px 40px;
-//     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
-// }
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+        order: 3;
+    }
+}
+
+.hy__navbar__search__input {
+    display: none;
+    font-size: 14px;
+    border: 1px solid $hy-gray-search;
+    border-radius: 20px;
+    width: 100%;
+    padding: 12px 8px 12px 40px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+    }
+}
 
 // Section "Heading"
 .hy__heading {
@@ -156,6 +203,11 @@ p {
         font-weight: 600;
         font-size: 48px;
         line-height: 58px;
+
+        @media screen and (min-width: $breakpoint-xl) {
+            font-size: 118px;
+            line-height: 143px;
+        }
     }
 }
 
@@ -164,11 +216,24 @@ p {
     padding: 16px 24px 20px 24px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 19px 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .hy__author__about {
     display: flex;
     margin-bottom: 24px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .hy__author__image {
@@ -200,11 +265,13 @@ p {
 .hy__author__social {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .hy__author__social__button {
     display: flex;
     align-items: center;
+    align-content: center;
     background: $hy-white;
     border: 1px solid $hy-gray-button-border;
     padding: 8px 14px;
@@ -212,6 +279,7 @@ p {
     font-size: 14px;
 
     i {
+        // Why height of icons can't be modified?
         height: 16px;
         margin-right: 8px;
     }
@@ -220,6 +288,10 @@ p {
 // Section main
 .hy__main {
     padding: 0 20px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 0 50px;
+    }
 }
 
 .hy__posts {
@@ -233,9 +305,16 @@ p {
     border-bottom: 1px solid $hy-black;
 }
 
-// TODO fix it
+// FIXME
 .hy__post:first-child {
     padding-top: 32px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 .hy__post:last-child {
@@ -243,15 +322,54 @@ p {
     border-bottom: none;
 }
 
-.hy__post__image,
-.hy__related__post__image,
-.hy__related__first__image {
-    width: 100%;
+.hy__post__text__wrapper {
+    margin-top: 28px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-.hy__post__heading,
+.hy__post__heading {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+    }
+}
+
+.hy__post__text {
+    @media screen and (min-width: $breakpoint-lg) {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.hy__post__image {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.hy__post__image:first-child {
+    max-height: 762px;
+}
+
+.hy__related__post__image {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+}
+
 .hy__related__post__heading {
-    margin-top: 28px;
+    margin-top: 20px;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -259,17 +377,24 @@ p {
 
 .hy__post__text,
 .hy__related__post__text {
-    margin-top: 24px;
+    margin-top: 20px;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 30px;
 }
 
 // Section Related
-.hy__related {
-    padding: 0 20px;
+.hy__related__section {
     color: $hy-white;
     background: $hy-gray-dark;
+}
+
+.hy__related {
+    padding: 0 20px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 0 50px;
+    }
 }
 
 .hy__related__heading {
@@ -281,18 +406,24 @@ p {
 
 .hy__related__post {
     padding: 48px 0;
-    border-bottom: 1px solid $hy-gray
+    border-bottom: 1px solid $hy-gray;
+
+    &.hy__related__post--first {
+        margin-top: 60px;
+    }
 }
 
-.hy__related__first {
-    margin-top: 108px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid $hy-gray
+.hy__related__post--first {
+    @media screen and (min-width: $breakpoint-lg) {
+        img {
+            max-height: 750px;
+        }
+    }
 }
 
-// TODO Full width of image
-// .hy__related__first__image {
-// }
+.hy__related__post__text__wrapper {
+    margin-top: 32px;
+}
 
 .hy__related__category {
     font-weight: 400;
@@ -300,20 +431,6 @@ p {
     line-height: 19px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-top: 32px;
-}
-
-.hy__related__first__heading {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 34px;
-    margin-top: 20px;
-}
-
-.hy__related__first__text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
 }
 
 .hy__reated__continue {
@@ -337,7 +454,7 @@ p {
     color: $hy-black;
     padding: 16px 0;
     width: 100%;
-    margin-bottom: 24px;
+    margin: 24px 0;
 }
 
 // Section subscribe
@@ -346,12 +463,24 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 128px 50px 93px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .hy__subscribe__heading {
     font-weight: 600;
     font-size: 28px;
     line-height: 34px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        font-size: 32px;
+        line-height: 39px;
+    }
 }
 
 .hy__subscribe__subheading {
@@ -359,6 +488,10 @@ p {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-top: 25px;
+    }
 }
 
 .hy__subscribe__input {
@@ -367,6 +500,17 @@ p {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin: 40px auto 0 auto;
+        position: relative;
+        max-width: 600px;
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+        margin: 40px auto 0 auto;
+        max-width: 748px;
+    }
 }
 
 .hy__subscribe__email {
@@ -383,6 +527,10 @@ p {
         font-size: 18px;
         line-height: 22px;
     }
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 20px;
+    }
 }
 
 .hy__subscribe__button {
@@ -393,6 +541,13 @@ p {
     color: white;
     padding: 14px 0;
     width: 100%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        position: absolute;
+        width: 127px;
+        right: 5px;
+        top: 5px;
+    }
 }
 
 .hy__subscribe__term {
@@ -400,26 +555,45 @@ p {
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-top: 40px;
+        line-height: 27px;
+    }
 }
 
 // Footer
 footer {
     background: $hy-gray-light;
-    padding: 7px 20px 24px 20px;
 }
 
 .hy_footer {
+    padding: 7px 20px 24px 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 56px 50px 0px 50px;
+    }
 }
 
 .hy__footer__column {
+    // flex-basis: auto;
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
     padding: 32px 0;
     border-bottom: 1px solid $hy-black;
+
+    @media screen and (min-width: $breakpoint-md) {
+        flex-basis: 33.33%;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+        flex-basis: 16.66%;
+        padding-top: 0;
+    }
 }
 
 .hy__footer__column__title {
@@ -437,13 +611,23 @@ footer {
 
 // // Footer bootom
 .hy__footer__bottom {
+    padding: 33px 20px 24px 20px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 40px 50px 37px 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .hy__footer__title {
-    margin-top: 33px;
     text-align: center;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        text-align: left;
+    }
 
     h4 {
         font-weight: 600;
@@ -457,6 +641,10 @@ footer {
         font-size: 14px;
         line-height: 17px;
         color: $hy-gray-footer;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -464,12 +652,24 @@ footer {
     margin-top: 38px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-top: 0;
+    }
 }
 
 .hy__footer__social {
     display: flex;
     justify-content: center;
     gap: 28px;
+
+    i {
+        height: 28px;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+        justify-content: flex-end;
+    }
 }
 
 .hy__footer__menu {
@@ -478,6 +678,12 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+
+
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-top: 20px;
+        justify-content: flex-end;
+    }
 }
 
 .hy__footer__link {
